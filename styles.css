@@ -1,0 +1,40 @@
+/* Flex 사용 */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Grid 사용 */
+  .movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  /* 카드 스타일 */
+  .movie-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .movie-card h3 {
+    margin: 10px 0;
+  }
+  
+  /* 알림 스타일 */
+  .alert {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: fit-content;
+  }
+  
