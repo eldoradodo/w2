@@ -11,6 +11,18 @@
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
   }
+
+  header {
+    text-align: center;
+    background-color: #ffed99; /* 연노랑색 배경 */
+    padding: 20px 0; /* 위아래 여백 추가 */
+  }
+
+  header h1 {
+    margin: 0; /* 기본 마진 제거 */
+  }
+
+
   
   /* 카드 스타일 */
   .movie-card {
@@ -37,4 +49,9 @@
     margin: 20px auto;
     width: fit-content;
   }
-  
+
+
+  .search-container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
