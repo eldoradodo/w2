@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>내배캠 영화 검색 사이트</title>
+  <title>A03조 김도연 영화 검색 사이트</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typeit/dist/typeit.min.js"></script>
+
 </head>
+
 <body>
 
   <header>
-    <h1>내배캠 영화 검색 사이트</h1>
+    <p id="multipleStrings"></p>
   </header>
-  
+
   <div class="search-container">
     <input type="text" id="searchInput" placeholder="영화 제목을 입력해주세요" autofocus>
     <button id="searchButton">Search</button>
   </div>
   <div id="movieContainer" class="movie-container"></div>
+  <footer>
+    <div class="footer-content">
+      <a href="https://github.com/your-github-link">
+        <img src="w2\img\git.png" alt="GitHub">
+      </a>
+      <a href="https://your-blog-link">
+        <img src="velog.jpg" alt="Velog">
+      </a>
+    </div>
+  </footer>
 
   <script src="movie.js"></script>
 </body>
+
 </html>

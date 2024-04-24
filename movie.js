@@ -70,4 +70,11 @@ document.addEventListener('DOMContentLoaded', function () {
       searchButton.click();
     }
   });
+
+  // TypeIt 효과 적용
+  new TypeIt("#multipleStrings", {
+    strings: ["내일 배움 캠프", "영화 검색 사이트"],
+    speed: 50,
+    waitUntilVisible: true,
+  }).go();
 });

@@ -1,57 +1,77 @@
 /* Flex 사용 */
 .search-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Grid 사용 */
-  .movie-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-  }
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 
-  header {
-    text-align: center;
-    background-color: #ffed99; /* 연노랑색 배경 */
-    padding: 20px 0; /* 위아래 여백 추가 */
-  }
+/* Grid 사용 */
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
 
-  header h1 {
-    margin: 0; /* 기본 마진 제거 */
-  }
+header {
+  text-align: center;
+  background-color: #ffed99; /* 연노랑색 배경 */
+  padding: 20px 0; /* 위아래 여백 추가 */
+}
 
+header p#multipleStrings {
+  /* 스타일 속성 추가 */
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 300;
+  font-size: 35px;
+  font-style: normal;
+}
 
-  
-  /* 카드 스타일 */
-  .movie-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-  }
-  
-  .movie-card img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .movie-card h3 {
-    margin: 10px 0;
-  }
-  
-  /* 알림 스타일 */
-  .alert {
-    background-color: #f2f2f2;
-    color: #333;
-    padding: 15px;
-    border-radius: 8px;
-    margin: 20px auto;
-    width: fit-content;
-  }
+footer {
+background-color: #ffed99; /* 연노랑색 배경 */
+padding: 20px;
+text-align: right;
+}
+
+.footer-content {
+display: flex;
+justify-content: flex-end;
+}
+
+.footer-content a {
+margin-left: 10px;
+}
 
 
-  .search-container{
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
+
+
+/* 카드 스타일 */
+.movie-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.movie-card h3 {
+  margin: 10px 0;
+}
+
+/* 알림 스타일 */
+.alert {
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+
+.search-container{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
