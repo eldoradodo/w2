@@ -14,8 +14,10 @@
 
 header {
   text-align: center;
-  background-color: #ffed99; /* 연노랑색 배경 */
-  padding: 20px 0; /* 위아래 여백 추가 */
+  background-color: #ffed99;
+  /* 연노랑색 배경 */
+  padding: 20px 0;
+  /* 위아래 여백 추가 */
 }
 
 header p#multipleStrings {
@@ -27,20 +29,28 @@ header p#multipleStrings {
 }
 
 footer {
-background-color: #ffed99; /* 연노랑색 배경 */
-padding: 20px;
-text-align: right;
+  background-color: #ffed99;
+  /* 연노랑색 배경 */
+  padding: 20px;
+  text-align: right;
+
 }
 
+
 .footer-content {
-display: flex;
-justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .footer-content a {
-margin-left: 10px;
+  margin-left: 10px;
 }
 
+.footer-img {
+  width: 40px; /* 현재 크기의 1/7로 조절 */
+  height: auto; /* 이미지 높이 자동 조절 */
+  border-radius: 50%; /* 모서리를 둥글게 함 */
+}
 
 
 
@@ -49,6 +59,7 @@ margin-left: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 10px;
+  background-color: #ffed99;
 }
 
 .movie-card img {
@@ -71,7 +82,37 @@ margin-left: 10px;
 }
 
 
-.search-container{
+.search-container {
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.movie-container {
+  margin-bottom: 30px; /* 카드들 아래에 간격 추가 */
+}
+
+/* 서치 버튼 스타일 */
+#searchButton {
+  background-color: #ffed99; /* 배경색 */
+  color: rgb(129, 129, 129); /* 텍스트 색상 */
+  border-color: black;
+  padding: 10px 20px; /* 내부 여백 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  text-decoration: none; /* 텍스트에 밑줄 없음 */
+  display: inline-block; /* 인라인 블록 요소로 표시 */
+  font-size: 16px; /* 폰트 크기 */
+  border-radius: 20px;
+  margin-left: 10px; /* 텍스트 박스와의 간격 */
+}
+
+#searchInput {
+  width: 300px; /* 텍스트 박스 너비 조절 */
+  border-radius: 10px;
+}
+
+/* 서치 컨테이너 스타일 */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px; /* 텍스트 박스와 서치 버튼 사이의 간격 */
 }

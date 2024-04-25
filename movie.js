@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(data => displayMovies(data.results))
     .catch(err => console.error(err));
 
+// 14번줄까지 tdmb 세팅 코드. 
+
   const searchInput = document.getElementById('searchInput');
   const searchButton = document.getElementById('searchButton');
   const movieContainer = document.getElementById('movieContainer');
