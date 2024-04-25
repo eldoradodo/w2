@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // 화살표 함수 사용 O
 // 배열 메소드 예시 중 2개 이상 사용 O (forEach, map)
 // DOM 제어 - 예시 목록 중 2개 이상 사용  O (document.addEventListener, document.createElement)
-
+/*대소문자 관계 없이 검색 가능하도록 하기 O*/
+/*키보드 엔텈키를 입력해도 검색버튼 클릭한 것과 동일하게 검색 실행 O*/
 
 

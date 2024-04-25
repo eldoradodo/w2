@@ -1,27 +1,12 @@
-/* Flex 사용 */
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-/* Grid 사용 */
-.movie-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-}
-
 header {
   text-align: center;
   background-color: #6C63FF;
-  /* 연노랑색 배경 */
   padding: 20px 0;
-  /* 위아래 여백 추가 */
+  /*위아래 여백*/
 }
 
+/*헤더 글꼴*/
 header p#multipleStrings {
-  /* 스타일 속성 추가 */
   font-family: "Black Han Sans", sans-serif;
   font-weight: 300;
   font-size: 35px;
@@ -29,31 +14,23 @@ header p#multipleStrings {
   font-style: normal;
 }
 
-footer {
-  background-color: #9a95ff;
-  /* 연노랑색 배경 */
-  padding: 20px;
-  text-align: right;
 
-}
-
-
-.footer-content {
+/* Flex 사용 */
+.search-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  /*수평 가운데 정렬*/
+  margin-bottom: 20px;
 }
 
-.footer-content a {
-  margin-left: 10px;
+/* Grid 사용 */
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /*그리드 컨테이너의 열 크기 지정. 그리드 셀의 수 자동으로 조정, (셀의 최소크기, 최대 크기(가능한 늘리기))*/
+  gap: 20px;
+  /*그리드 셀 사이 간격*/
 }
-
-.footer-img {
-  width: 40px; /* 현재 크기의 1/7로 조절 */
-  height: auto; /* 이미지 높이 자동 조절 */
-  border-radius: 50%; /* 모서리를 둥글게 함 */
-}
-
-
 
 /* 카드 스타일 */
 .movie-card {
@@ -80,9 +57,9 @@ footer {
   padding: 15px;
   border-radius: 8px;
   margin: 20px auto;
-  width: fit-content;
+  width: fit-content;  
+  /*알림의 크기 너비에 맞게 자동 조절*/ 
 }
-
 
 .search-container {
   margin-top: 30px;
@@ -90,25 +67,29 @@ footer {
 }
 
 .movie-container {
-  margin-bottom: 30px; /* 카드들 아래에 간격 추가 */
+  margin-bottom: 30px;
+  /* 카드들 아래에 간격 추가 */
 }
 
 /* 서치 버튼 스타일 */
 #searchButton {
-  background-color: #9a95ff; /* 배경색 */
-  color: white; /* 텍스트 색상 */
+  background-color: #9a95ff;
+  color: white;
   border-color: black;
-  padding: 10px 20px; /* 내부 여백 */
-  text-align: center; /* 텍스트 가운데 정렬 */
-  text-decoration: none; /* 텍스트에 밑줄 없음 */
-  display: inline-block; /* 인라인 블록 요소로 표시 */
-  font-size: 16px; /* 폰트 크기 */
+  padding: 10px 20px;
+  /* 내부 여백 */
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
   border-radius: 20px;
-  margin-left: 10px; /* 텍스트 박스와의 간격 */
+  margin-left: 10px;
+  /* 텍스트 박스와의 간격 */
 }
 
+/*텍스트박스 스타일*/
 #searchInput {
-  width: 300px; /* 텍스트 박스 너비 조절 */
+  width: 300px;
+  /* 텍스트 박스 너비 조절 */
   border-radius: 10px;
 }
 
@@ -116,11 +97,33 @@ footer {
 .search-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px; /* 텍스트 박스와 서치 버튼 사이의 간격 */
+  margin-bottom: 30px;
+  /* 텍스트 박스와 서치 버튼 사이의 간격 */
 }
 
 
+footer {
+  background-color: #9a95ff;
+  /* 연노랑색 배경 */
+  padding: 30px;
+  text-align: right;
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-content a {
+  margin-left: 10px;
+}
+
+.footer-img {
+  width: 40px;
+  border-radius: 50%;
+  /* 모서리를 둥글게 함 */
+}
+
 /*선택 요구 사항*/
 /*flex, grid 사용 O*/
-/*대소문자 관계 없이 검색 가능하도록 하기 O*/
-/*키보드 엔텈키를 입력해도 검색버튼 클릭한 것과 동일하게 검색 실행 O*/
