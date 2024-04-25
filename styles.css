@@ -14,7 +14,7 @@
 
 header {
   text-align: center;
-  background-color: #ffed99;
+  background-color: #6C63FF;
   /* 연노랑색 배경 */
   padding: 20px 0;
   /* 위아래 여백 추가 */
@@ -25,11 +25,12 @@ header p#multipleStrings {
   font-family: "Black Han Sans", sans-serif;
   font-weight: 300;
   font-size: 35px;
+  color: white;
   font-style: normal;
 }
 
 footer {
-  background-color: #ffed99;
+  background-color: #9a95ff;
   /* 연노랑색 배경 */
   padding: 20px;
   text-align: right;
@@ -56,10 +57,11 @@ footer {
 
 /* 카드 스타일 */
 .movie-card {
-  border: 1px solid #ddd;
+  border: 1px solid #7169ff;
   border-radius: 8px;
+  border-width: 5px;
   padding: 10px;
-  background-color: #ffed99;
+  background-color: #9a95ff;
 }
 
 .movie-card img {
@@ -73,7 +75,7 @@ footer {
 
 /* 알림 스타일 */
 .alert {
-  background-color: #f2f2f2;
+  background-color: #9a95ff;
   color: #333;
   padding: 15px;
   border-radius: 8px;
@@ -93,8 +95,8 @@ footer {
 
 /* 서치 버튼 스타일 */
 #searchButton {
-  background-color: #ffed99; /* 배경색 */
-  color: rgb(129, 129, 129); /* 텍스트 색상 */
+  background-color: #9a95ff; /* 배경색 */
+  color: white; /* 텍스트 색상 */
   border-color: black;
   padding: 10px 20px; /* 내부 여백 */
   text-align: center; /* 텍스트 가운데 정렬 */
