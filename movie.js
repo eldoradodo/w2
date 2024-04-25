@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function displayMovies(movies) {
     movieContainer.innerHTML = '';
 
-    movies.forEach(movie => {
+    movies.forEach(movie => {   //요구사항 - forEach 사용
       const { id, title, overview, poster_path, vote_average } = movie;
       const imageUrl = poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : 'https://via.placeholder.com/150';
 
@@ -52,7 +52,11 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>평점: ${vote_average}</p>
       `;
       movieCard.addEventListener('click', () => {
-        alert(`선택한 영화 ID: ${id}`);
+        movies.map(movie => {         //요구사항 - map 사용
+          if (movie.id === id) {
+            alert(`선택한 영화 ID: ${movie.id}`);
+          }
+        });
       });
       movieContainer.appendChild(movieCard);
     });
@@ -80,3 +84,12 @@ document.addEventListener('DOMContentLoaded', function () {
     waitUntilVisible: true,
   }).go();
 });
+
+
+// let, const 만을 사용하여 변수 선언 O
+// 화살표 함수 사용 O
+// 배열 메소드 예시 중 2개 이상 사용 O (forEach, map)
+// DOM 제어 - 예시 목록 중 2개 이상 사용  O (document.addEventListener, document.createElement)
+
+
+
