@@ -12,15 +12,24 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(response => response.json())
     .then(data => displayMovies(data.results))
     .catch(err => console.error(err));
+  // 14번줄까지 tdmb 세팅 코드. 
 
-// 14번줄까지 tdmb 세팅 코드. 
 
+  //html 요소 가져오기
   const searchInput = document.getElementById('searchInput');
   const searchButton = document.getElementById('searchButton');
   const movieContainer = document.getElementById('movieContainer');
 
   // 검색 입력란에 포커스
   searchInput.focus();
+
+  // 검색 버튼 눌렀을 때 이벤트 처리
+  searchButton.addEventListener('click', () => {
+    const query = searchInput.value.trim().toLowerCase();
+    if (query !== '') {
+      searchMovies(query);
+    }
+  });
 
   // 검색 함수
   function searchMovies(query) {
@@ -39,8 +48,14 @@ document.addEventListener('DOMContentLoaded', function () {
   function displayMovies(movies) {
     movieContainer.innerHTML = '';
 
-    movies.forEach(movie => {   //요구사항 - forEach 사용
-      const { id, title, overview, poster_path, vote_average } = movie;
+    movies.forEach(movie => { //요구사항 - forEach 사용
+      const {
+        id,
+        title,
+        overview,
+        poster_path,
+        vote_average
+      } = movie;
       const imageUrl = poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : 'https://via.placeholder.com/150';
 
       const movieCard = document.createElement('div');
@@ -52,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>평점: ${vote_average}</p>
       `;
       movieCard.addEventListener('click', () => {
-        movies.map(movie => {         //요구사항 - map 사용
+        movies.map(movie => { //요구사항 - map 사용
           if (movie.id === id) {
             alert(`선택한 영화 ID: ${movie.id}`);
           }
@@ -61,14 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
       movieContainer.appendChild(movieCard);
     });
   }
-
-  // 검색 버튼 눌렀을 때 이벤트 처리
-  searchButton.addEventListener('click', () => {
-    const query = searchInput.value.trim().toLowerCase();
-    if (query !== '') {
-      searchMovies(query);
-    }
-  });
 
   // Enter 키로 검색 실행
   searchInput.addEventListener('keypress', function (e) {
@@ -92,5 +99,3 @@ document.addEventListener('DOMContentLoaded', function () {
 // DOM 제어 - 예시 목록 중 2개 이상 사용  O (document.addEventListener, document.createElement)
 /*대소문자 관계 없이 검색 가능하도록 하기 O*/
 /*키보드 엔텈키를 입력해도 검색버튼 클릭한 것과 동일하게 검색 실행 O*/
-
-
