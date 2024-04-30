@@ -47,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // 영화 정보를 화면에 표시하는 함수
   function displayMovies(movies) {
     // documentFragment를 생성.
+
+    movieContainer.innerHTML = '';
     const fragment = document.createDocumentFragment();
 
     movies.forEach(movie => {
