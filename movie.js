@@ -46,9 +46,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // 영화 정보를 화면에 표시하는 함수
   function displayMovies(movies) {
-    movieContainer.innerHTML = '';
+    // documentFragment를 생성.
+    const fragment = document.createDocumentFragment();
 
-    movies.forEach(movie => { //요구사항 - forEach 사용
+    movies.forEach(movie => {
       const {
         id,
         title,
@@ -67,15 +68,20 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>평점: ${vote_average}</p>
       `;
       movieCard.addEventListener('click', () => {
-        movies.map(movie => { //요구사항 - map 사용
+        movies.map(movie => {
           if (movie.id === id) {
             alert(`선택한 영화 ID: ${movie.id}`);
           }
         });
       });
-      movieContainer.appendChild(movieCard);
+
+      // fragment에 movieCard를 추가.
+      fragment.appendChild(movieCard);
     });
-  }
+
+    // movieContainer에 한 번에 fragment를 추가.
+    movieContainer.appendChild(fragment);
+  };
 
   // Enter 키로 검색 실행
   searchInput.addEventListener('keypress', function (e) {
@@ -98,4 +104,4 @@ document.addEventListener('DOMContentLoaded', function () {
 // 배열 메소드 예시 중 2개 이상 사용 O (forEach, map)
 // DOM 제어 - 예시 목록 중 2개 이상 사용  O (document.addEventListener, document.createElement)
 /*대소문자 관계 없이 검색 가능하도록 하기 O*/
-/*키보드 엔텈키를 입력해도 검색버튼 클릭한 것과 동일하게 검색 실행 O*/
+/*키보드 엔터키를 입력해도 검색버튼 클릭한 것과 동일하게 검색 실행 O*/
