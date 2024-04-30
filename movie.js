@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       // fragment에 movieCard를 추가.
-      fragment.appendChild(movieCard);
+      fragment.appendChild(movieCard);                    //fragment 사용 (피드백 반영 수정 부분)
     });
 
     // movieContainer에 한 번에 fragment를 추가.
